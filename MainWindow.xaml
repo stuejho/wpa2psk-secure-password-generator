@@ -22,7 +22,23 @@
         </StatusBar>
 
         <!-- Last child fills up remaining DockPanel content -->
-        <Grid Name="contentGrid" Margin="5" Height="Auto">
-        </Grid>
+        <StackPanel Margin="5">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Margin" Value="0,10,0,5"/>
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock>Secret key:</TextBlock>
+            <TextBox Name="secretKeyTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+
+            <TextBlock>IV:</TextBlock>
+            <TextBox Name="ivTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+
+            <Button Name="genPwdBtn" Margin="0,5,0,0" Height="20">Generate Password</Button>
+
+            <TextBlock>WPA2-PSK Password:</TextBlock>
+            <TextBox Name="passwordTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+        </StackPanel>
     </DockPanel>
 </Window>
