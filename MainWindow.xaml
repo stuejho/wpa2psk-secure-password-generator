@@ -6,10 +6,13 @@
         xmlns:local="clr-namespace:wpa2psk_secure_password_generator"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomCommands.Exit" CanExecute="ExitCommand_CanExecute" Executed="ExitCommand_Executed" />
+    </Window.CommandBindings>
     <DockPanel Name="mainPanel">
         <Menu DockPanel.Dock="Top" Background="White" BorderBrush="Gray" BorderThickness="0,0,0,1">
             <MenuItem Header="_File">
-                <MenuItem Name="menuItemExit" Header="_Exit" />
+                <MenuItem Name="menuItemExit" Header="_Exit" Command="local:CustomCommands.Exit" />
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom" BorderBrush="Gray" BorderThickness="0,1,0,0">
