@@ -32,7 +32,7 @@
                     </StackPanel.Resources>
 
                     <TextBlock>Passphrase:</TextBlock>
-                    <TextBox Name="passphraseTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+                    <TextBox Name="passphraseGenTextBox" Margin="0,0,0,10" Height="20"></TextBox>
 
                     <Button Name="genPwdBtn" Margin="0,5,0,10" Height="20" Width="128" 
                             HorizontalAlignment="Right"
@@ -46,8 +46,28 @@
                     <TextBox Name="genPwdTextBox" Margin="0,0,0,10" Height="20"></TextBox>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Retrieve Stored Password">
-                
+            <TabItem Header="Load Stored Password">
+                <StackPanel Margin="5">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Margin" Value="0,10,0,5"/>
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <TextBlock>Passphrase:</TextBlock>
+                    <TextBox Name="passphraseLoadTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+
+                    <Button Name="loadPwdBtn" Margin="0,5,0,10" Height="20" Width="128" 
+                            HorizontalAlignment="Right"
+                            Click="loadPwdBtn_Click">
+                        Load Password File
+                    </Button>
+
+                    <Separator />
+
+                    <TextBlock>Loaded Password:</TextBlock>
+                    <TextBox Name="loadPwdTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+                </StackPanel>
             </TabItem>
         </TabControl>
     </DockPanel>
