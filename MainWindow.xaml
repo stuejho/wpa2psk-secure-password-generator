@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpa2psk_secure_password_generator"
         mc:Ignorable="d"
-        Title="MainWindow" Width="475" Height="330">
+        Title="WiFi Password Generator" Width="475" Height="330">
     <Window.CommandBindings>
         <CommandBinding Command="local:CustomCommands.Exit" CanExecute="ExitCommand_CanExecute" Executed="ExitCommand_Executed" />
     </Window.CommandBindings>
