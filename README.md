@@ -1,6 +1,6 @@
-# WiFi Password Generator
+# Wi-Fi Password Generator
 
-Generates WiFi passwords for WPA2-PSK networks.
+Generates Wi-Fi passwords for WPA2-PSK networks.
 
 Target Framework: .NET Core 3.1
 
@@ -15,7 +15,7 @@ To generate a password:
 
 To load in a generated password:
 1. Select the "Load Stored Password" tab
-1. Enter the passphrase used to generate the WiFi password
+1. Enter the passphrase used to generate the Wi-Fi password
 1. Use the "Load File" button to select the encrypted password file
 1. Click the "Load Password" button
 1. Copy the loaded password and use it appropriately
