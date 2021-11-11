@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace wpa2psk_secure_password_generator
 {
@@ -33,6 +23,27 @@ namespace wpa2psk_secure_password_generator
         private void ExitCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void genPwdBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Generate a 63 char wifi password as the plaintext
+            string plaintext = Vault.GenerateWifiPassword();
+
+            // Generate a key from the user's passphrase input
+            byte[] key = Vault.GeneratePrivateKey(passphraseTextBox.Text);
+
+            // Encrypt the new WiFi password with the generated key 
+            byte[] ivPlusCipher = Vault.EncryptStringToBytes_AesCBC(plaintext, key);
+
+            // Save the ciphertext to file
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Cipher file (*.cipher)|*.cipher";
+            if (saveFileDialog.ShowDialog() == true)
+                File.WriteAllBytes(saveFileDialog.FileName, ivPlusCipher);
+
+            // Display password to user
+            genPwdTextBox.Text = plaintext;
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpa2psk_secure_password_generator"
         mc:Ignorable="d"
-        Title="MainWindow" Width="450" Height="270">
+        Title="MainWindow" Width="475" Height="270">
     <Window.CommandBindings>
         <CommandBinding Command="local:CustomCommands.Exit" CanExecute="ExitCommand_CanExecute" Executed="ExitCommand_Executed" />
     </Window.CommandBindings>
@@ -34,12 +34,16 @@
                     <TextBlock>Passphrase:</TextBlock>
                     <TextBox Name="passphraseTextBox" Margin="0,0,0,10" Height="20"></TextBox>
 
-                    <Button Name="genPwdBtn" Margin="0,5,0,10" Height="20" Width="128" HorizontalAlignment="Right">Generate Password</Button>
+                    <Button Name="genPwdBtn" Margin="0,5,0,10" Height="20" Width="128" 
+                            HorizontalAlignment="Right"
+                            Click="genPwdBtn_Click">
+                        Generate Password
+                    </Button>
 
                     <Separator />
                     
                     <TextBlock>Generated Password:</TextBlock>
-                    <TextBox Name="ivTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+                    <TextBox Name="genPwdTextBox" Margin="0,0,0,10" Height="20"></TextBox>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Retrieve Stored Password">
