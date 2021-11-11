@@ -43,7 +43,7 @@
                     <Separator />
                     
                     <TextBlock>Generated Password:</TextBlock>
-                    <TextBox Name="genPwdTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+                    <TextBox Name="genPwdTextBox" Margin="0,0,0,10" Height="20" IsReadOnly="True"></TextBox>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Load Stored Password">
@@ -72,7 +72,7 @@
                     <Separator />
 
                     <TextBlock>Loaded Password:</TextBlock>
-                    <TextBox Name="loadPwdTextBox" Margin="0,0,0,10" Height="20"></TextBox>
+                    <TextBox Name="loadPwdTextBox" Margin="0,0,0,10" Height="20" IsReadOnly="True"></TextBox>
                 </StackPanel>
             </TabItem>
         </TabControl>
