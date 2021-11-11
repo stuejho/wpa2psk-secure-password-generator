@@ -27,12 +27,16 @@ If you want to publish a single-file executable application, you need to publish
 ## Screenshots
 
 ### Generate New Password
-
-![Generate New Password](img/generate_new_password.PNG)
+<div align="center">
+  <img src="img/generate_new_password.PNG" width="928" height="649">>
+</div>
 
 ### Load Stored Password
 
-![Load Stored Password](img/load_stored_password.PNG)
+
+<div align="center">
+  <img src="img/load_stored_password.PNG" width="928" height="649">>
+</div>
 
 ### Single-File Executable, Self-Contained
 
