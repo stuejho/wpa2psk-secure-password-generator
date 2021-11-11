@@ -24,6 +24,16 @@ To load in a generated password:
 
 If you want to publish a single-file executable application, you need to publish for each configuration, such as Linux x64, Linux ARM64, Windows x64, and so forth. Single-file apps are always OS and architecture-specific.
 
+## Screenshots
+
+### Generate New Password
+
+![Generate New Password](img/generate_new_password.PNG)
+
+### Load Stored Password
+
+![Load Stored Password](img/load_stored_password.PNG)
+
 ### Single-File Executable, Self-Contained
 
 https://docs.microsoft.com/en-us/dotnet/core/deploying/single-file#publish-a-single-file-app---visual-studio
