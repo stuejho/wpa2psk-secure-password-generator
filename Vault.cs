@@ -119,5 +119,18 @@ namespace wpa2psk_secure_password_generator
                 tempString.Append(chars[b % (chars.Length)]);
             return tempString.ToString();
         }
+
+        // This function is used to generate wifi passwords of varying lengths is used for benchmarking
+        public static string GenerateWifiPassword(int size)
+        {
+            var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            StringBuilder tempString = new StringBuilder(size);
+            byte[] data = new byte[size];
+            using (var crypto = RandomNumberGenerator.Create())
+                crypto.GetBytes(data);
+            foreach (byte b in data)
+                tempString.Append(chars[b % (chars.Length)]);
+            return tempString.ToString();
+        }
     }
 }
