@@ -4,6 +4,20 @@ Generates Wi-Fi passwords for WPA2-PSK networks.
 
 Target Framework: .NET Core 3.1
 
+## Compilation and Execution
+
+This password generator was written using C#. To run it, a Visual Studio installation is strongly recommended. In the Visual Studio Installer, be sure the following has been installed:
+
+* .NET desktop development [Workload]
+* .NET Core 3.1 Runtime (LTS) [Individual component]
+
+Next, to import the project, do the following:
+
+1. Open Visual Studio
+1. Choose the "Clone a repository" option
+1. Paste in the link to this repository: https://github.com/stuejho/wpa2psk-secure-password-generator
+1. Click the "Run" button to compile and execute the application
+
 ## Usage
 
 To generate a password:
